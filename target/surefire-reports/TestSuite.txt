@@ -1,0 +1,111 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 50.817 sec <<< FAILURE! - in TestSuite
+beforeTest(example.NewTest)  Time elapsed: 50.582 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+Failed to connect to binary FirefoxBinary(C:\Program Files\Mozilla Firefox\firefox.exe) on port 7055; process output follows: 
+@resource://gre/modules/TelemetryControllerParent.jsm:629:24
+submitExternalPing@resource://gre/modules/TelemetryControllerParent.jsm:183:17
+saveShutdownPings@resource://gre/modules/TelemetrySession.jsm:1012:36
+shutdownChromeProcess/cleanup/<@resource://gre/modules/TelemetrySession.jsm:1230:20
+cleanup@resource://gre/modules/TelemetrySession.jsm:1237:9
+shutdownChromeProcess@resource://gre/modules/TelemetrySession.jsm:1254:14
+shutdown@resource://gre/modules/TelemetrySession.jsm:252:17
+_cleanupOnShutdown@resource://gre/modules/TelemetryControllerParent.jsm:974:35
+observe@resource://gre/modules/AsyncShutdown.jsm:577:16
+
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  TelemetryController: shutting down
+          Phase: profile-before-change-telemetry
+          State: Error getting state: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange" at addBlocker@resource://gre/modules/AsyncShutdown.jsm:720:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:528:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:467:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1566:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1586:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:18:28
+getShutdownState@resource://gre/modules/TelemetrySend.jsm:1682:7
+getShutdownState@resource://gre/modules/TelemetrySend.jsm:368:30
+_getState@resource://gre/modules/TelemetryControllerParent.jsm:1078:38
+setupTelemetry/<@resource://gre/modules/TelemetryControllerParent.jsm:918:18
+safeGetState@resource://gre/modules/AsyncShutdown.jsm:259:17
+Barrier/addBlocker/promise<@resource://gre/modules/AsyncShutdown.jsm:768:20
+observe@resource://gre/modules/AsyncShutdown.jsm:577:16
+
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:720:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:528:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:467:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1566:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1586:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:18:28
+removeAbortedSessionPing@resource://gre/modules/TelemetryControllerParent.jsm:722:5
+removeAbortedSessionPing@resource://gre/modules/TelemetryControllerParent.jsm:250:17
+shutdownChromeProcess/cleanup/<@resource://gre/modules/TelemetrySession.jsm:1233:42
+observe@resource://gre/modules/AsyncShutdown.jsm:577:16
+
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 720: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 720: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 720: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 720: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 720: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+[Parent 4576, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:723
+
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'DESKTOP-623D8HK', ip: '10.128.34.69', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: driver.version: FirefoxDriver
+	at example.NewTest.beforeTest(NewTest.java:20)
+Caused by: org.openqa.selenium.firefox.NotConnectedException: 
+Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms. Firefox console output:
+@resource://gre/modules/TelemetryControllerParent.jsm:629:24
+submitExternalPing@resource://gre/modules/TelemetryControllerParent.jsm:183:17
+saveShutdownPings@resource://gre/modules/TelemetrySession.jsm:1012:36
+shutdownChromeProcess/cleanup/<@resource://gre/modules/TelemetrySession.jsm:1230:20
+cleanup@resource://gre/modules/TelemetrySession.jsm:1237:9
+shutdownChromeProcess@resource://gre/modules/TelemetrySession.jsm:1254:14
+shutdown@resource://gre/modules/TelemetrySession.jsm:252:17
+_cleanupOnShutdown@resource://gre/modules/TelemetryControllerParent.jsm:974:35
+observe@resource://gre/modules/AsyncShutdown.jsm:577:16
+
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  TelemetryController: shutting down
+          Phase: profile-before-change-telemetry
+          State: Error getting state: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange" at addBlocker@resource://gre/modules/AsyncShutdown.jsm:720:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:528:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:467:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1566:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1586:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:18:28
+getShutdownState@resource://gre/modules/TelemetrySend.jsm:1682:7
+getShutdownState@resource://gre/modules/TelemetrySend.jsm:368:30
+_getState@resource://gre/modules/TelemetryControllerParent.jsm:1078:38
+setupTelemetry/<@resource://gre/modules/TelemetryControllerParent.jsm:918:18
+safeGetState@resource://gre/modules/AsyncShutdown.jsm:259:17
+Barrier/addBlocker/promise<@resource://gre/modules/AsyncShutdown.jsm:768:20
+observe@resource://gre/modules/AsyncShutdown.jsm:577:16
+
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:720:15
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:528:26
+addBlocker@resource://gre/modules/AsyncShutdown.jsm:467:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1566:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1586:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.jsm:18:28
+removeAbortedSessionPing@resource://gre/modules/TelemetryControllerParent.jsm:722:5
+removeAbortedSessionPing@resource://gre/modules/TelemetryControllerParent.jsm:250:17
+shutdownChromeProcess/cleanup/<@resource://gre/modules/TelemetrySession.jsm:1233:42
+observe@resource://gre/modules/AsyncShutdown.jsm:577:16
+
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 720: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 720: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 720: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 720: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 720: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+[Parent 4576, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:723
+
+	at example.NewTest.beforeTest(NewTest.java:20)
+
